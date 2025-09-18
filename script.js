@@ -1,43 +1,53 @@
-const products = [
-  { name: "Shoes",  price: 1200 },
-  { name: "T-shirt", price: 800 },
-  { name: "Cap",     price: 300 }
-];
-const cart = [];
+// const products = [
+//   { name: "Shoes",  price: 1200 },
+//   { name: "T-shirt", price: 800 },
+//   { name: "Cap",     price: 300 }
+// ];
+// const cart = [];
 
-function addToCart(product, quantity = 1) {
-  // object destructuring
-  const { name, price } = product;
+// function addToCart(product, quantity = 1) {
+//   // object destructuring
+//   const { name, price } = product;
 
-  // compute total for this line
-  const total = price * quantity;
+//   // compute total for this line
+//   const total = price * quantity;
 
-  // template literal for readable log
-  console.log(`Added ${quantity} x ${name} to cart (Total: ${total})`);
+//   // template literal for readable log
+//   console.log(`Added ${quantity} x ${name} to cart (Total: ${total})`);
 
-  // store item for checkout
-  cart.push({ name, price, quantity, total });
-  console.log(cart)
-}
-function checkout(...item){
+//   // store item for checkout
+//   cart.push({ name, price, quantity, total });
+//   console.log(cart)
+// }
+// function checkout(...item){
   
-  if(item.length===0){
-    console.log("Item is not avilable")
-    return
-  }
- let itemCount=item.length
-  const totalBill=item.reduce((acc,item)=>{
-    const {price,quantity}=item;
-    return acc + price * quantity
-  },0)
+//   if(item.length===0){
+//     console.log("Item is not avilable")
+//     return
+//   }
+//  let itemCount=item.length
+//   const totalBill=item.reduce((acc,item)=>{
+//     const {price,quantity}=item;
+//     return acc + price * quantity
+//   },0)
 
-   console.log(`You bought ${itemCount} items. Your bill: Rs ${totalBill}`);
+//    console.log(`You bought ${itemCount} items. Your bill: Rs ${totalBill}`);
+// }
+
+
+// // Example:
+// addToCart(products[0], 2); // Shoes ×2
+// addToCart(products[2]);    // Cap ×1 (default quantity)
+// checkout(...cart);
+
+function simulateAsync(value, delay, cb){
+  console.log("blah blah")
+  setTimeout(()=>{
+    cb(null,value *2)
+  },delay)
 }
 
-
-// Example:
-addToCart(products[0], 2); // Shoes ×2
-addToCart(products[2]);    // Cap ×1 (default quantity)
-checkout(...cart);
-
-
+simulateAsync(3, 5000,(err, result)=>{
+  if(err) return console.log(err)
+    else return console .log(result)
+})
