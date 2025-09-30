@@ -1,0 +1,41 @@
+
+<!-- <div id="hero" class="card">Hello <span>World</span></div>
+<button id="btn">Log selections</button>
+
+<script>
+const byId = document.getElementById('hero');            // single element
+const byClass = document.getElementsByClassName('card'); // HTMLCollection (live)
+const byTag = document.getElementsByTagName('span');     // HTMLCollection
+const qs = document.querySelector('#hero');              // first match
+const qsa = document.querySelectorAll('.card span');     // NodeList (static)
+
+document.getElementById('btn').addEventListener('click', () => {
+  console.log('byId:', byId);
+  console.log('byClass[0]:', byClass[0]);
+  console.log('byTag[0]:', byTag[0]);
+  console.log('querySelector:', qs);
+  console.log('querySelectorAll:', qsa);
+});
+</script> -->
+<!-- create an input with class name and a button. On button click console.log() the input element (select it with querySelector). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>Text 
+   <input class="name" type="text" placeholder="Enter ur name"><br>
+   <button id="btn">Click</button>
+   <script>
+    const qs =document.querySelector('.name')
+    document.getElementById("btn").addEventListener("click",()=>{
+        console.log('Button Clicked')
+        console.log(qs)
+        console.log(qs.value)
+    })
+   </script>
+</body>
+</html>
