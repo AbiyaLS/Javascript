@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="counter">0</h1>
+    <button id="add" style="background-color: green;color: white; height: 40px;width: 40px;">+</button>
+    <button id="remove" style="background-color: red;color: white; height: 40px;width: 40px;">-</button>
+    <button id="reset"style="background-color: blue;color: white; height: 40px;">Reset</button>
+
+    <script>
+        let count =0;
+        let display = document.getElementById("counter")
+
+        const plusBtn =document.getElementById("add").addEventListener("click",()=>{
+            count++
+            display.textContent=count
+        })
+            const minusBtn =document.getElementById("remove").addEventListener("click",()=>{
+            count--
+            display.textContent=count
+        })
+
+        const resetBtn = document.getElementById("reset").addEventListener("click",()=>{
+            count=0
+            display.textContent=count
+        })
+    </script>
+</body>
+</html>

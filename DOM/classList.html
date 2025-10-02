@@ -1,0 +1,71 @@
+<!-- <!doctype html>
+<html>
+<head>
+  <style>
+    .highlight {
+      color: white;
+      background-color: green;
+      padding: 5px;
+    }
+    .big {
+      font-size: 30px;
+    }
+  </style>
+</head>
+<body>
+  <p id="text">This is a paragraph.</p>
+  <button id="addBtn">Add Class</button>
+  <button id="removeBtn">Remove Class</button>
+  <button id="toggleBtn">Toggle Class</button>
+
+  <script>
+    const para = document.getElementById("text");
+
+    document.getElementById("addBtn").addEventListener("click", () => {
+      para.classList.add("highlight");
+    });
+
+    document.getElementById("removeBtn").addEventListener("click", () => {
+      para.classList.remove("highlight");
+    });
+
+    document.getElementById("toggleBtn").addEventListener("click", () => {
+      para.classList.toggle("big");
+    });
+  </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .redText { 
+            color: red; } 
+         .blueBg { 
+            background: lightblue; }
+    </style>
+</head>
+<body>
+   <p id="paragraph">Random Paragraph</p> 
+   <button id="btn1">Add</button>
+   <button id="btn2">Remove</button>
+   <button id="btn3">Toggle</button>
+
+   <script>
+    const para = document.getElementById('paragraph')
+    document.getElementById("btn1").addEventListener("click",()=>{
+        para.classList.add("redText")
+    })
+     document.getElementById("btn2").addEventListener("click",()=>{
+        para.classList.remove("redText")
+    })
+     document.getElementById("btn3").addEventListener("click",()=>{
+        para.classList.toggle("blueBg")
+    })
+   </script>
+</body>
+</html>

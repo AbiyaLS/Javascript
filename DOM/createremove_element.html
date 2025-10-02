@@ -1,0 +1,58 @@
+<!-- <!doctype html>
+<html>
+<body>
+  <div id="container">
+    <p>Existing paragraph</p>
+  </div>
+  <button id="addBtn">Add Paragraph</button>
+  <button id="removeBtn">Remove Last</button>
+
+  <script>
+    const container = document.getElementById("container");
+
+    // Add element
+    document.getElementById("addBtn").addEventListener("click", () => {
+      const newPara = document.createElement("p");   // create
+      newPara.textContent = "I am a new paragraph!"; // give text
+      container.appendChild(newPara);                // attach to container
+    });
+
+    // Remove last element
+    document.getElementById("removeBtn").addEventListener("click", () => {
+      const lastChild = container.lastElementChild; 
+      if (lastChild) {
+        lastChild.remove(); // remove it
+      }
+    });
+  </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="collection">
+     <li>Orange</li>
+    </ul>
+    <button id="btn1">Add Item</button>
+    <button id="remove">Remove Item</button>
+    <script>
+     const list =document.getElementById("collection")
+     document.getElementById('btn1').addEventListener('click',()=>{
+        const fruits=document.createElement("li")
+        fruits.textContent="Apple";
+        list.appendChild(fruits)
+     })
+     document.getElementById("remove").addEventListener("click",()=>{
+        const lastElement =list.lastElementChild
+        if(lastElement) {
+            lastElement.remove()
+        } 
+     })
+    </script>
+</body>
+</html>
