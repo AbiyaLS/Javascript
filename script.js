@@ -40,14 +40,25 @@
 // addToCart(products[2]);    // Cap ×1 (default quantity)
 // checkout(...cart);
 
-function simulateAsync(value, delay, cb){
-  console.log("blah blah")
-  setTimeout(()=>{
-    cb(null,value *2)
-  },delay)
-}
+// function simulateAsync(value, delay, cb){
+//   console.log("blah blah")
+//   setTimeout(()=>{
+//     cb(null,value *2)
+//   },delay)
+// }
 
-simulateAsync(3, 5000,(err, result)=>{
-  if(err) return console.log(err)
-    else return console .log(result)
-})
+// simulateAsync(3, 5000,(err, result)=>{
+//   if(err) return console.log(err)
+//     else return console .log(result)
+// })
+const students = [
+  { name: "Abiya", age: 23, course: "BCA" },
+  { name: "Arya", age: 22 },
+  { name: "Neha", age: 24, course: "BA" }
+];
+const [{name: studentName, age: studentAge, course: studentCourse="unknown"},...otherStudents]=students
+
+console.log(studentName,studentAge,studentCourse)
+// console.log(otherStudents)
+const otherStudentsCourse= otherStudents.map(({name,age,course ="unknown"})=>({name, age, course}))
+console.log(otherStudentsCourse)

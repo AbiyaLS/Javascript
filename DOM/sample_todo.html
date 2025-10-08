@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            list-style-type: none;
+        }
+        button{
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mini TodoList</h1>
+    <input type="text" id="input" placeholder="Enter ur todo">
+    <button id="add">Add Todo</button>
+    <ul id="todoList"></ul>
+
+    <script>
+        const inputTodo =document.getElementById("input")
+        const addBtn = document.getElementById("add")
+        const list = document.getElementById("todoList")
+
+        addBtn.addEventListener("click",()=>{
+            const textInput =inputTodo.value.trim()
+
+            if(textInput !== ""){
+                const li =document.createElement("li") 
+                li.textContent=textInput
+         // -------------delete button----------------
+          const dltbtn =document.createElement("button")
+          dltbtn.style.backgroundColor="red"
+            dltbtn.style.color="white"
+           dltbtn.textContent="Delete"
+           dltbtn.addEventListener("click",()=>{
+            li.remove()
+           })
+
+         // -------------Mark Done Button----------------
+           const markbtn =document.createElement("button")
+          markbtn.style.backgroundColor="black"
+            markbtn.style.color="white"
+           markbtn.textContent="Mark"
+           markbtn.addEventListener("click",()=>{
+            li.style.textDecoration="line-through"
+            markbtn.disabled=true
+           })
+                   list.appendChild(li)
+                    li.appendChild(dltbtn)       
+                      li.appendChild(markbtn) 
+                       inputTodo.value=""   
+            }
+        })
+    </script>
+</body>
+</html>
