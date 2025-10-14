@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>DOM Sample Exercise</h1>
+   <ul id="collection">
+    <li>Mango</li>
+    <li>Apple</li>
+    <li>PineApple</li>
+   </ul>
+   <button id="button">Click</button>
+   <script>
+     const ulCollection =document.getElementById("collection")
+     const btn =document.getElementById("button")
+    // ------------create new element---------------
+      let li=document.createElement("li")
+      li.textContent="Grapes"
+      ulCollection.appendChild(li)
+// ---------------------Change the color of the first list element----------
+      let listElements = document.getElementsByTagName("li")
+      let firstElement =listElements[0]
+      firstElement.style.color="blue"
+// -------------------when click button alert happen-----------------------
+      btn.addEventListener("click",()=>alert("You Clicked Me"))
+   </script>
+</body>
+</html>
