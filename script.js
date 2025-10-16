@@ -1,23 +1,31 @@
-class Person{
-  constructor(name, age){
-    this.name=name
-    this.age=age
-  }
+// Step 1: Array of 5 fruits
+const fruits = ["apple", "banana", "orange", "mango", "grape"];
 
-  introduce(){
-    console.log(`"Hi, I'm ${this.name} and I'm ${this.age} years old."`)
-  }
-}
-class Employee extends Person{
-  constructor(name,age,jobTitle){
-    super(name,age)
-    this.jobTitle=jobTitle
-  }
-  work(){
-    console.log(`${this.name} is working as a ${this.jobTitle}`)
-  }
-}
+// Step 2: Object with fruit prices
+const prices = {
+  apple: 100,
+  banana: 50,
+  orange: 80,
+  mango: 120,
+  grape: 90
+};
 
-const employe=new Employee("Abiya",23,"Software Enginner")
-employe.work()
-employe.introduce()
+// Step 3: Object with fruit discounts
+const discounts = {
+  apple: 10,   // 10%
+  banana: 5,
+  orange: 8,
+  mango: 15,
+  grape: 7
+};
+let grandTotal =0
+// Step 4: Find total cost after discount for each fruit
+fruits.forEach(fruit => {
+  const price = prices[fruit];
+  const discount = discounts[fruit];
+  const totalCost = price - (price * discount / 100);
+  console.log(`${fruit}: ₹${totalCost}`);
+  grandTotal += totalCost
+});
+
+console.log("Total Price of fruits is ",grandTotal)
