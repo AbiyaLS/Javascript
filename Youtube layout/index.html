@@ -5,20 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YouTube Layout</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body>
     <!-- ---------NavBar------------------- -->
     <nav>
       <b>YouTube</b>
-      <div class="">
-        <input type="text" placeholder="Search">
-        <button>search</button>
-        <button>mic</button>
+      <div class="middle box">
+       <div class="search-box"> <input type="text" placeholder="Search">
+        <button class="search-btn">search</button></div>
+         <div class="mic">mic</div>
       </div>
-      <div>
-        <button>+ Create</button>
-        <button>notifi</button>
-        <button>profile</button>
+     
+      <div class="right box">
+        <button class="create-btn">+ Create</button>
+       <div class="notification">
+          <i class="fa-solid fa-bell noti"></i>
+          <div class="noti-count">3</div>
+      </div>
+      <div class="profile">
+        <img src="./photo.jpg" alt="">
+      </div>  
       </div>
     </nav>
     <!-- ------------------------sidebar---------------- -->
